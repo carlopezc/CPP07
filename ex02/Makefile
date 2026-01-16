@@ -5,12 +5,12 @@
 #                                                     +:+ +:+         +:+      #
 #    By: carlotalcd <carlotalcd@student.42.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2026/01/16 11:02:40 by carlotalcd        #+#    #+#              #
-#    Updated: 2026/01/16 12:15:38 by carlotalcd       ###   ########.fr        #
+#    Created: 2026/01/16 12:15:45 by carlotalcd        #+#    #+#              #
+#    Updated: 2026/01/16 13:39:15 by carlotalcd       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= iter
+NAME		= array
 
 #********************************************************************************#
 
@@ -27,7 +27,7 @@ DDIR		= deps
 #***********************************************x*********************************#
 
 SRC			= src/main.cpp
-HEADER		= src/Iter.hpp
+HEADER		= src/Array.hpp
 
 OBJ			= $(SRC:%.cpp=$(ODIR)/%.o)
 DEPS		= $(OBJ:%.o=$(DDIR)/%.d)
@@ -38,7 +38,7 @@ all : $(NAME)
 
 $(NAME) : Makefile $(OBJ)| $(ODIR) $(DDIR)
 	$(CC) $(CFLAGS) $(OBJ) -o $@
-	@echo "\033[32m ✌ CPP07 EX01 COMPILED!\033[0m"
+	@echo "\033[32m ✌ CPP07 EX02 COMPILED!\033[0m"
 
 $(ODIR) $(DDIR):
 	@mkdir -p $@
